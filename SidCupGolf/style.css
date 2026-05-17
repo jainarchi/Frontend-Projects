@@ -1,0 +1,451 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-main: 5rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.25rem;
+  --font-size-h3: 1.25rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+  --font-weight-first: 900;
+  --font-weight-sec: 800;
+
+  --text-white: rgb(243, 234, 234);
+  --btn-green: rgb(149, 193, 30);
+}
+
+#logo {
+  width: 94px;
+}
+
+nav {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--space-2xl) 0;
+  color: var(--text-white);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+nav > div,
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav button {
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: 2rem;
+  border: 0.15rem solid var(--btn-green);
+  color: var(--text-white);
+  background: #232121;
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+}
+
+#vidCont {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  background: #313230;
+}
+
+#vidCont video {
+  object-fit: cover;
+  object-position: center;
+}
+
+#cursor {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  position: fixed;
+  background: var(--btn-green);
+  z-index: 99;
+}
+
+#blurCursor {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: fixed;
+  background: rgba(0, 196, 0, 0.534);
+  z-index: 9;
+}
+
+main {
+  position: relative;
+  z-index: 9;
+  min-height: 100vh;
+  width: 100%;
+  background: #0000004f;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-md);
+  text-align: center;
+  color: var(--text-white);
+  position: relative;
+  z-index: 9;
+}
+#page1 h1 {
+  font-size: var(--font-size-main);
+  font-weight: var(--font-weight-first);
+  position: relative;
+}
+
+#page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  color: #000;
+  -webkit-text-stroke: 1px var(--btn-green);
+  z-index: -1;
+}
+
+#page1 h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-sec);
+}
+
+#page1 p {
+  max-width: 700px;
+  font-size: clamp(var(--font-size-xl));
+  font-size: var(--font-size-xl);
+  line-height: 1.75rem;
+}
+
+/* page2 */
+
+#page2 {
+  min-height: 100vh;
+  width: 100vw;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  color: white;
+}
+
+#movingTextCont {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  padding: 2rem;
+}
+#movingTextCont::-webkit-scrollbar {
+  display: none;
+}
+
+.movingText {
+  white-space: nowrap;
+  display: flex;
+  gap: 2rem;
+  animation: text-animation 30s linear infinite;
+}
+
+.movingText h1 {
+  flex-shrink: 0;
+  font-size: 6vmax;
+  -webkit-text-stroke: 1px whitesmoke;
+  text-transform: uppercase;
+  color: transparent;
+  transition: 0.1s linear;
+}
+.movingText h1:hover {
+  color: var(--btn-green);
+  -webkit-text-stroke: 1px var(--btn-green);
+}
+
+@keyframes text-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#page2 #div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* border: 2px solid red; */
+  padding: 1rem;
+
+}
+
+#div2 .imgbox {
+  width: 170px;
+  height: 190px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgbox img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.imgbox .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(46, 45, 45, 0.226);
+  z-index: 99;
+}
+
+#aboutbox {
+  width: 60%;
+  padding: 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  order: 2;
+  flex-shrink: 0;
+}
+
+#aboutbox h2 {
+  font-size: 2rem;
+}
+
+#aboutbox p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+#div2 #imgleft {
+  order: 1;
+}
+
+#div2 #imgright {
+  order: 3;
+}
+
+#cardCont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    border: 2px solid blue;
+    min-height: 65vh;
+    padding: 6rem 6vw;
+    gap: 3vw;
+ 
+}
+
+
+#cardCont .card {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.card>h2 , .card #textdiv{
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.2rem;
+}
+
+.card h2{
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+
+#card1{
+  background-image: url('./assets/card1.jpg');
+}
+
+#card2{
+  background-image: url('./assets/card2.jpg');
+}
+
+#card3{
+  background-image: url('./assets/card3.jpg');
+}
+
+
+.card .textCover{
+  width: 100%;
+  height: 100%;
+  background: var(--btn-green);
+  padding: 1.5rem;
+  padding-top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color:  black;
+  opacity:  0;
+ transition: all ease 0.3s ;
+ z-index:  9;
+ position: relative;
+}
+
+.textCover p{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.card:hover .textCover{
+  opacity:  1 ;
+}
+
+.card:hover #cardCont .card .textCover.arrow{
+  opacity: 1 ;
+}
+
+
+
+#cardCont .card .textCover .arrow{
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -12%;
+  right: -12% ;
+}
+
+.card .arrow i{
+  font-size: 2.5rem;
+  color: black;
+
+}
+.card .arrow:hover{
+  background: whitesmoke ;
+
+} 
+.card .arrow:hover i{
+   color: var(--btn-green);
+} 
+
+#page2 #signUpText{
+   padding: 4rem;
+   text-align: center;
+   background: linear-gradient(to right top , rgb(190, 208, 32), rgb(152, 223, 46) , rgb(105, 191, 24));
+}
+
+#page2 #signUpText h4{
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  #page2 #div2 {
+    flex-wrap: wrap;
+    gap: 3vh;
+  }
+  #div2 #imgright {
+    order: 2;
+  }
+  #aboutbox {
+    order: 3;
+    width: 100%;
+  }
+  #div2 .imgbox {
+    width: 40vw;
+    height: 45vw;
+  }
+
+  nav div ul{
+    display: none;
+  }
+
+
+#cardCont{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+
+.card .textCover{
+   padding-top: 12%;
+}
+#cardCont .card .textCover .arrow{
+  top: -15% ;
+  right: -6% 
+ 
+}
+}

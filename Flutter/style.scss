@@ -1,0 +1,381 @@
+@use "_function" as m;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  i {
+    font-size: 1.3rem;
+  }
+  button:hover {
+    box-shadow: 0rem 0rem 0.4rem rgb(85, 85, 255);
+  }
+
+  section {
+    .content {
+      max-width: 1920px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  nav {
+    width: 100%;
+    @include m.flex-row(space-between);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background: white;
+
+    #nav-right {
+      display: none;
+    }
+
+    button {
+      list-style: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0.7rem;
+      background: white;
+      color: rgb(82, 79, 79);
+      transition: 0.1s linear;
+      cursor: pointer;
+    }
+    button:hover {
+      background: whitesmoke;
+      color: rgb(63, 63, 254);
+    }
+    #eco-btn {
+      color: rgb(63, 63, 254);
+    }
+
+    #navlastbtn {
+      color: white;
+      background: rgb(63, 63, 254);
+      padding: 0.7rem 1.5rem;
+    }
+
+    #hamburger {
+      display: block;
+    }
+  }
+
+  #view1 {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgb(219, 242, 255), white, rgb(255, 233, 237));
+
+    .top {
+      width: 100%;
+      @include m.flex-col(3rem);
+
+      .imgCont {
+        width: 100%;
+      }
+
+      .textCont {
+        width: 100%;
+
+        h1 {
+          font-size: clamp(2.5rem, 4.5vw, 4rem);
+          max-width: 450px;
+          margin: auto;
+        }
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 5rem 0;
+      color: black;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgb(79, 79, 79);
+  }
+
+  #view2 {
+    width: 100%;
+    padding: 4rem 2rem 0rem 2rem;
+
+    .box {
+      padding: 2rem 0;
+      border-top: 0.2rem solid rgb(227, 227, 227);
+      @include m.flex-col(1.5rem);
+
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  #view1,
+  #view2,
+  #view3 {
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  #view3,
+  #view4 {
+    width: 100%;
+
+    .box {
+      width: 100%;
+      padding: 2rem;
+
+      .imgCont {
+        width: 100%;
+      }
+    }
+
+    .textCont {
+      @include m.flex-col(1.4rem);
+      padding-right: 2vw;
+
+      h4 {
+        font-size: 1.2rem;
+        color: rgb(90, 88, 88);
+      }
+      h1 {
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+      }
+
+      .btm {
+        @include m.flex-col(1.2rem);
+
+        h5 {
+          margin-left: 1.2rem;
+        }
+        i {
+          font-size: 1rem;
+        }
+      }
+
+      button {
+        border-radius: 2rem;
+        border: 0.05rem solid rgb(83, 83, 249);
+        background: transparent;
+        color: rgb(83, 83, 249);
+        padding: 0.7rem 2rem;
+        width: fit-content;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      #bluebtn {
+        background: rgb(83, 83, 249);
+        color: white;
+      }
+    }
+
+    .boxbg {
+      background: linear-gradient(whitesmoke, rgb(252, 252, 208));
+    }
+  }
+
+  #view4 {
+    padding: 5rem 2rem;
+    #bluebox {
+      background: rgb(0, 0, 71);
+      color: white;
+      padding: 5rem 3rem;
+      border-radius: 3rem;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      #bluebox-textCont {
+        z-index: 2;
+      }
+
+      p {
+        padding: 1.5rem 0;
+        color: white;
+      }
+
+      button {
+        background: whitesmoke;
+      }
+      button:hover {
+        background: rgb(19, 19, 76);
+        color: white;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    padding: 3rem;
+    background: whitesmoke;
+
+    #footer-top {
+      @include m.flex-col(2rem);
+
+      #gridCont {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+
+        .firstli {
+          font-weight: 600;
+        }
+        li {
+          font-size: 1rem;
+          margin: 0.8rem 0;
+          color: rgb(65, 63, 63);
+        }
+      }
+    }
+
+    #footer-btm {
+      text-align: center;
+      padding-top: 2rem;
+
+      ul {
+        @include m.flex-row(center);
+        gap: 1rem;
+        padding: 2rem 0;
+      }
+
+      #footer-btm-btm {
+        padding-top: 2rem;
+        border-top: 0.1rem solid rgb(191, 191, 191);
+        @include m.flex-col(0rem);
+        li,
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    
+    #view4{
+      #bluebox img{
+        width: auto;
+      }
+    }
+
+    footer {
+      #footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logoCont {
+          width: 45%;
+        }
+        #gridCont {
+          grid-template-columns: 1fr 1fr 1fr;
+          width: 55%;
+        }
+      }
+
+      #footer-btm {
+        text-align: start;
+
+        ul {
+          justify-content: start;
+        }
+
+        #footer-btm-btm {
+          @include m.flex-row(space-between);
+          gap: 14rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    .content {
+      padding: 0rem 10rem;
+    }
+
+    nav {
+      #nav-right {
+        @include m.flex-row-gap("row", 1rem);
+      }
+
+      #hamburger {
+        display: none;
+      }
+    }
+
+    #view1 .content {
+      .top {
+        @include m.flex-row-gap(row-reverse);
+
+        h1 {
+          text-align: left;
+        }
+      }
+    }
+
+    #view2 .content {
+      @include m.flex-row-gap("" , 4rem, "start");
+    }
+
+    #view3 {
+      .box .imgCont {
+        width: 50%;
+        text-align: center;
+      }
+
+      .box .textCont {
+        max-width: 50%;
+      }
+
+      .dir-row {
+        @include m.flex-row-gap();
+      }
+
+      .whitebgbox {
+        @include m.flex-row-gap(row-reverse);
+      }
+    }
+
+    #view4 {
+      #bluebox {
+        padding: 4rem;
+      }
+    }
+  }
+}

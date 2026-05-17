@@ -1,0 +1,354 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main i {
+  font-size: 1.3rem;
+}
+main button:hover {
+  box-shadow: 0rem 0rem 0.4rem rgb(85, 85, 255);
+}
+main section .content {
+  max-width: 1920px;
+  display: block;
+  margin: auto;
+}
+main nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background: white;
+}
+main nav #nav-right {
+  display: none;
+}
+main nav button {
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.7rem;
+  background: white;
+  color: rgb(82, 79, 79);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+main nav button:hover {
+  background: whitesmoke;
+  color: rgb(63, 63, 254);
+}
+main nav #eco-btn {
+  color: rgb(63, 63, 254);
+}
+main nav #navlastbtn {
+  color: white;
+  background: rgb(63, 63, 254);
+  padding: 0.7rem 1.5rem;
+}
+main nav #hamburger {
+  display: block;
+}
+main #view1 {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgb(219, 242, 255), white, rgb(255, 233, 237));
+}
+main #view1 .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main #view1 .top .imgCont {
+  width: 100%;
+}
+main #view1 .top .textCont {
+  width: 100%;
+}
+main #view1 .top .textCont h1 {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  max-width: 450px;
+  margin: auto;
+}
+main #view1 p {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 5rem 0;
+  color: black;
+}
+main p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgb(79, 79, 79);
+}
+main #view2 {
+  width: 100%;
+  padding: 4rem 2rem 0rem 2rem;
+}
+main #view2 .box {
+  padding: 2rem 0;
+  border-top: 0.2rem solid rgb(227, 227, 227);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main #view2 .box h3 {
+  font-size: 1.4rem;
+}
+main #view1 img,
+main #view2 img,
+main #view3 img {
+  width: 100%;
+  max-width: 600px;
+}
+main #view3,
+main #view4 {
+  width: 100%;
+}
+main #view3 .box,
+main #view4 .box {
+  width: 100%;
+  padding: 2rem;
+}
+main #view3 .box .imgCont,
+main #view4 .box .imgCont {
+  width: 100%;
+}
+main #view3 .textCont,
+main #view4 .textCont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-right: 2vw;
+}
+main #view3 .textCont h4,
+main #view4 .textCont h4 {
+  font-size: 1.2rem;
+  color: rgb(90, 88, 88);
+}
+main #view3 .textCont h1,
+main #view4 .textCont h1 {
+  font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+}
+main #view3 .textCont .btm,
+main #view4 .textCont .btm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+main #view3 .textCont .btm h5,
+main #view4 .textCont .btm h5 {
+  margin-left: 1.2rem;
+}
+main #view3 .textCont .btm i,
+main #view4 .textCont .btm i {
+  font-size: 1rem;
+}
+main #view3 .textCont button,
+main #view4 .textCont button {
+  border-radius: 2rem;
+  border: 0.05rem solid rgb(83, 83, 249);
+  background: transparent;
+  color: rgb(83, 83, 249);
+  padding: 0.7rem 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  cursor: pointer;
+}
+main #view3 .textCont #bluebtn,
+main #view4 .textCont #bluebtn {
+  background: rgb(83, 83, 249);
+  color: white;
+}
+main #view3 .boxbg,
+main #view4 .boxbg {
+  background: linear-gradient(whitesmoke, rgb(252, 252, 208));
+}
+main #view4 {
+  padding: 5rem 2rem;
+}
+main #view4 #bluebox {
+  background: rgb(0, 0, 71);
+  color: white;
+  padding: 5rem 3rem;
+  border-radius: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+main #view4 #bluebox img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main #view4 #bluebox #bluebox-textCont {
+  z-index: 2;
+}
+main #view4 #bluebox p {
+  padding: 1.5rem 0;
+  color: white;
+}
+main #view4 #bluebox button {
+  background: whitesmoke;
+}
+main #view4 #bluebox button:hover {
+  background: rgb(19, 19, 76);
+  color: white;
+}
+main footer {
+  width: 100%;
+  padding: 3rem;
+  background: whitesmoke;
+}
+main footer #footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer #footer-top #gridCont {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+main footer #footer-top #gridCont .firstli {
+  font-weight: 600;
+}
+main footer #footer-top #gridCont li {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+  color: rgb(65, 63, 63);
+}
+main footer #footer-btm {
+  text-align: center;
+  padding-top: 2rem;
+}
+main footer #footer-btm ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+main footer #footer-btm #footer-btm-btm {
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgb(191, 191, 191);
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+main footer #footer-btm #footer-btm-btm li,
+main footer #footer-btm #footer-btm-btm p {
+  font-size: 0.9rem;
+}
+main footer li {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  main #view4 #bluebox img {
+    width: auto;
+  }
+  main footer #footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main footer #footer-top .logoCont {
+    width: 45%;
+  }
+  main footer #footer-top #gridCont {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 55%;
+  }
+  main footer #footer-btm {
+    text-align: start;
+  }
+  main footer #footer-btm ul {
+    justify-content: start;
+  }
+  main footer #footer-btm #footer-btm-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .content {
+    padding: 0rem 10rem;
+  }
+  main nav #nav-right {
+    display: flex;
+    flex-direction: "row";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  main nav #hamburger {
+    display: none;
+  }
+  main #view1 .content .top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  main #view1 .content .top h1 {
+    text-align: left;
+  }
+  main #view2 .content {
+    display: flex;
+    flex-direction: "";
+    justify-content: center;
+    align-items: "start";
+    gap: 4rem;
+  }
+  main #view3 .box .imgCont {
+    width: 50%;
+    text-align: center;
+  }
+  main #view3 .box .textCont {
+    max-width: 50%;
+  }
+  main #view3 .dir-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  main #view3 .whitebgbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  main #view4 #bluebox {
+    padding: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */

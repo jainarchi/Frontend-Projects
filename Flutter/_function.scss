@@ -1,0 +1,20 @@
+@mixin flex-col($gap){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin flex-row($justify){
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin flex-row-gap( $flex-dir : row , $gap : 4rem , $align : center){
+    display: flex;
+    flex-direction: $flex-dir;
+    justify-content: center;
+    align-items: $align;
+    gap: $gap;
+}
